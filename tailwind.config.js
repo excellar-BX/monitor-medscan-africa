@@ -12,7 +12,9 @@ export default {
     extend: {
       colors: {
         blue: '#647BED',
-        limewhite: '#F5F5F5'
+        limewhite: '#F5F5F5',
+        gray: "#949595",
+        lightgray: "#F8F9FB"
       }
     },
   },
