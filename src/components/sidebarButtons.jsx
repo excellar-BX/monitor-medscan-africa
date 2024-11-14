@@ -1,7 +1,7 @@
-import homeicon from './icons/homeicon.svg';
-import setting from "./icons/setting.svg";
-import producticon from "./icons/producticon.svg";
-import profile from "./icons/profile.svg";
+import homeicon from '../icons/homeicon.svg';
+import setting from "../icons/setting.svg";
+import producticon from "../icons/producticon.svg";
+import profile from "../icons/profile.svg";
 
 
 function HomeButton({active}) {
