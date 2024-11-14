@@ -1,23 +1,19 @@
-import { HomeButton,ProductButton,ManufacturerButton,SettingsButton } from "../src/components/sidebarButtons"
+import Header from "../src/components/Header";
+import NavigationPanel from "../src/components/navigationpanel";
+import SearchBar from "../src/components/searchbar";
+import { useState } from "react";
 
 function HomeDahboard() {
-    return(
-     <div className="flex flex-row">
-        <div className="w-[20.5%]" id="sidebar">
-            <ul className="mt=[220px]">
-             <li><HomeButton /></li>
-             <li><ProductButton /></li>
-             <li><ManufacturerButton /></li>
-             <li><SettingsButton /></li>
-            </ul>
-
-        </div>
-         <div className="w-[79.5%]" id="details">
-
-         </div>
-     </div>
-    )
+  return (
+    <div className="flex w-screen h-screen bg-limewhite  ">
+      <div className="pt-[240px] bg-white h-full">
+        <NavigationPanel />
+      </div>
+      <div className="" id="details">
+        <Header />
+      </div>
+    </div>
+  );
 }
 
-
-export default HomeDahboard
+export default HomeDahboard;
