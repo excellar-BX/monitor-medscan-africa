@@ -1,23 +1,61 @@
-import { HomeButton,ProductButton,ManufacturerButton,SettingsButton } from "../src/components/sidebarButtons"
+import {
+  HomeButton,
+  ProductButton,
+  ManufacturerButton,
+  SettingsButton,
+} from "../src/components/sidebarButtons";
+import { useState } from "react";
 
 function HomeDahboard() {
-    return(
-     <div className="flex flex-row">
-        <div className="w-[20.5%]" id="sidebar">
-            <ul className="mt=[220px]">
-             <li><HomeButton /></li>
-             <li><ProductButton /></li>
-             <li><ManufacturerButton /></li>
-             <li><SettingsButton /></li>
-            </ul>
+  const [active, setactive] = useState({
+    active: true,
+    id: 1,
+  });
 
-        </div>
-         <div className="w-[79.5%]" id="details">
+  const clickaction = (id) => {
+    setactive({
+      active: true,
+      id: id,
+    });
+  };
 
-         </div>
-     </div>
-    )
+  return (
+    <div className="flex  h-screen ">
+      <div className="flex flex-col relative h-screen " id="sidebar">
+        <ul className="absolute top-[220px]">
+          <li
+            onClick={() => {
+              clickaction(1);
+            }}
+          >
+            <HomeButton active={active} />
+          </li>
+          <li
+            onClick={() => {
+              clickaction(2);
+            }}
+          >
+            <ProductButton active={active} />
+          </li>
+          <li
+            onClick={() => {
+              clickaction(3);
+            }}
+          >
+            <ManufacturerButton active={active} />
+          </li>
+          <li
+            onClick={() => {
+              clickaction(4);
+            }}
+          >
+            <SettingsButton active={active} />
+          </li>
+        </ul>
+      </div>
+      <div className="" id="details"></div>
+    </div>
+  );
 }
 
-
-export default HomeDahboard
+export default HomeDahboard;

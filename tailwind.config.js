@@ -10,7 +10,8 @@ export default {
     },
     extend: {
       colors: {
-        blue: '#647BED'
+        blue: '#647BED',
+        limewhite: '#F5F5F5'
       }
     },
   },
