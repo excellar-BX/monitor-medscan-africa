@@ -9,6 +9,7 @@ import HomeDahboard from "../pages/HomeDashboard";
 import HomeOutlet from "../pages/HomeOutlet";
 import ProductPage from "../pages/products";
 import ManufacturerOutlet from "../pages/manufacturesOutlet";
+import ProductDetails from "../pages/ProductDetails";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
         element: <ManufacturerOutlet />,
       },
     ],
+  },
+
+  {
+    path: "/product-details",
+    element: <ProductDetails />,
   },
 ]);
 
