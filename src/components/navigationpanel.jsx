@@ -1,3 +1,4 @@
+import { Outlet, Link } from "react-router-dom";
 import {
   HomeButton,
   ProductButton,
@@ -20,34 +21,36 @@ function NavigationPanel() {
   };
 
   return (
-    <nav className="flex-col w-[294px] " id="sidebar">
+    <nav className="flex-col w-[264px] " id="sidebar">
       <div
         onClick={() => {
           clickaction(1);
         }}
       >
-        <HomeButton active={active} />
+        <Link to={`/Home`} ><HomeButton active={active} /></Link>
       </div>
       <div
         onClick={() => {
           clickaction(2);
         }}
       >
+        <Link to={`/Product`} >
         <ProductButton active={active} />
+        </Link>
       </div>
       <div
         onClick={() => {
           clickaction(3);
         }}
       >
-        <ManufacturerButton active={active} />
+        <Link to={`/manufacturers`} ><ManufacturerButton active={active} /></Link>
       </div>
       <div
         onClick={() => {
           clickaction(4);
         }}
       >
-        <SettingsButton active={active} />
+       <Link to={`/`} > <SettingsButton active={active} /></Link>
       </div>
     </nav>
   );
