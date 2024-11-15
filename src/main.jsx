@@ -17,11 +17,15 @@ const router = createBrowserRouter([
     element: <HomeDahboard />,
     children: [
       {
-        path: "/Home",
+        index: true,
         element: <HomeOutlet />,
       },
       {
-        path: "/Product",
+        path: "Home", 
+        element: <HomeOutlet />,
+      },
+      {
+        path: "Product",
         element: <ProductPage />,
       },
       {
@@ -30,7 +34,10 @@ const router = createBrowserRouter([
       },
     ],
   },
-
+  {
+    path: "*", // Catch-all route for undefined paths
+    element: <HomeDahboard />, // Redirects to HomeDahboard
+  },
   {
     path: "/product-details",
     element: <ProductDetails />,
