@@ -31,17 +31,17 @@ function TextContent() {
 function TableHeader() {
 
     return(
-        <div class="flex-col ml-[50px] w-[785px] bg-white items-center  mt-[20px] ">
-      <table className="ml-[20px] w-[690px] bg-white ">
+        <div class="flex-col ml-[50px] w-[795px] bg-white items-center  mt-[20px] ">
+      <table className="ml-[20px] w-[795px] bg-white ">
         <thead>
           <tr>
-            <th className="px-[40px] py-[10px] text-center  text-gray-600 font-jarkatasans text-[13px] font-bold ">
+            <th className="pl-[40px] py-[10px] text-center  text-gray-600 font-jarkatasans text-[13px] font-bold ">
               S/N
             </th>
-            <th className="px-[40px] py-[10px] text-center  text-gray-600 font-jarkatasans text-[13px] font-bold ">
+            <th className="pl-[67px] py-[10px] text-start  text-gray-600 font-jarkatasans text-[13px] font-bold ">
               Name
             </th>
-            <th className="px-[120px] py-[10px] text-center  text-gray-600 font-jarkatasans text-[13px] font-bold ">
+            <th className="pl-[218px] py-[10px] text-center  text-gray-600 font-jarkatasans text-[13px] font-bold ">
               Product categories
             </th>
             <th className="px-[40px] py-[10px] text-center  text-gray-600 font-jarkatasans text-[13px] font-bold ">

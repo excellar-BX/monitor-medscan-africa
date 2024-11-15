@@ -2,7 +2,7 @@ function Table() {
   return (
     <div class="flex-col ml-[109px] w-[750px] bg-white items-center overflow-x-auto mt-[20px] pb-[20px] ">
         <p className="ml-[43px] mb-[14px] font-jarkatasans font-bold text-[23px] mt-[20px] "> Recent Activities</p>
-      <table className="ml-[20px] w-[690px] bg-white ">
+      <table className="ml-[30px] w-[670px] bg-white ">
         <thead>
           <tr>
             <th className="px-[24px] py-[10px] text-left text-gray-600 font-jarkatasans text-[13px] font-bold ">
