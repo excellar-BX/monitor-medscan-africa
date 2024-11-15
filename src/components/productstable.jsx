@@ -1,6 +1,7 @@
 import dropdown from '../icons/dropdown.svg';
 import previousicon from '../icons/previousicon.png';
 import nexticon from '../icons/nexticon.png';
+import { Link } from 'react-router-dom';
 
 function ProductTable() {
     return(
@@ -27,73 +28,91 @@ function ProductTable() {
             <td className="px-[24px] py-[10px] pb-[22px] mt-[5px] font-jarkatasans text-[13px]   text-darkgray border-gray border-b-[1px] align-top border-b">
               Full product name
             </td>
+            <Link to={`/product-details`}  >
             <td className="px-[24px] py-[10px] pb-[22px] text-blue  text-end mt-[5px] font-jarkatasans text-[13px]  border-gray border-b-[1px] align-top border-b">
               View Product details
             </td>
+            </Link>
           </tr>
           <tr>
             <td className="px-[24px] py-[10px] pb-[22px] mt-[5px] font-jarkatasans text-[13px]   text-darkgray border-gray border-b-[1px] align-top border-b">
               Full product name
             </td>
+            <Link to={`/product-details`}>
             <td className="px-[24px] py-[10px] pb-[22px] text-blue  text-end mt-[5px] font-jarkatasans text-[13px]  border-gray border-b-[1px] align-top border-b">
               View Product details
             </td>
+            </Link>
           </tr>
           <tr>
             <td className="px-[24px] py-[10px] pb-[22px] mt-[5px] font-jarkatasans text-[13px]   text-darkgray border-gray border-b-[1px] align-top border-b">
               Full product name
             </td>
+            <Link to={`/product-details`}>
             <td className="px-[24px] py-[10px] pb-[22px] text-blue  text-end mt-[5px] font-jarkatasans text-[13px]  border-gray border-b-[1px] align-top border-b">
               View Product details
             </td>
+            </Link>
           </tr>
           <tr>
             <td className="px-[24px] py-[10px] pb-[22px] mt-[5px] font-jarkatasans text-[13px]   text-darkgray border-gray border-b-[1px] align-top border-b">
               Full product name
             </td>
+            <Link to={`/product-details`}>
             <td className="px-[24px] py-[10px] pb-[22px] text-blue  text-end mt-[5px] font-jarkatasans text-[13px]  border-gray border-b-[1px] align-top border-b">
               View Product details
             </td>
+            </Link>
           </tr>
           <tr>
             <td className="px-[24px] py-[10px] pb-[22px] mt-[5px] font-jarkatasans text-[13px]   text-darkgray border-gray border-b-[1px] align-top border-b">
               Full product name
             </td>
+            <Link to={`/product-details`}>
             <td className="px-[24px] py-[10px] pb-[22px] text-blue  text-end mt-[5px] font-jarkatasans text-[13px]  border-gray border-b-[1px] align-top border-b">
               View Product details
             </td>
+            </Link>
           </tr>
           <tr>
             <td className="px-[24px] py-[10px] pb-[22px] mt-[5px] font-jarkatasans text-[13px]   text-darkgray border-gray border-b-[1px] align-top border-b">
               Full product name
             </td>
+            <Link to={`/product-details`}>
             <td className="px-[24px] py-[10px] pb-[22px] text-blue  text-end mt-[5px] font-jarkatasans text-[13px]  border-gray border-b-[1px] align-top border-b">
               View Product details
             </td>
+            </Link>
           </tr>
           <tr>
             <td className="px-[24px] py-[10px] pb-[22px] mt-[5px] font-jarkatasans text-[13px]   text-darkgray border-gray border-b-[1px] align-top border-b">
               Full product name
             </td>
+            <Link to={`/product-details`}>
             <td className="px-[24px] py-[10px] pb-[22px] text-blue  text-end mt-[5px] font-jarkatasans text-[13px]  border-gray border-b-[1px] align-top border-b">
               View Product details
             </td>
+            </Link>
           </tr>
           <tr>
             <td className="px-[24px] py-[10px] pb-[22px] mt-[5px] font-jarkatasans text-[13px]   text-darkgray border-gray border-b-[1px] align-top border-b">
               Full product name
             </td>
+            <Link to={`/product-details`}>
             <td className="px-[24px] py-[10px] pb-[22px] text-blue  text-end mt-[5px] font-jarkatasans text-[13px]  border-gray border-b-[1px] align-top border-b">
               View Product details
             </td>
+            </Link>
           </tr>
           <tr>
             <td className="px-[24px] py-[10px] pb-[22px] mt-[5px] font-jarkatasans text-[13px]   text-darkgray border-gray border-b-[1px] align-top border-b">
               Full product name
             </td>
+            <Link to={`/product-details`}>
             <td className="px-[24px] py-[10px] pb-[22px] text-blue  text-end mt-[5px] font-jarkatasans text-[13px]  border-gray border-b-[1px] align-top border-b">
               View Product details
             </td>
+            </Link>
           </tr>
         </tbody>
       </table>
