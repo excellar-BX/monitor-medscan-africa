@@ -2,6 +2,7 @@ import React from "react";
 import location from "../src/icons/locationicon.svg";
 import eclipse from "../src/icons/eclipse.svg";
 import dottedmarker from "../src/icons/dottedmarker.svg";
+import { Link } from "react-router-dom";
 
 const ProductDetails = () => {
     const productData = {
@@ -14,7 +15,8 @@ const ProductDetails = () => {
     return (
         <div className='bg-gray-100 pb-20'>
             <div className='flex mb-10 md:mb-16 p-0 md:p-5 bg-white w-full  items-center'>
-                <button className='text-gray-600 hover:text-gray-900'>
+               <Link to={`/product`}>
+               <button className='text-gray-600 hover:text-gray-900'>
                     <svg
                         className='w-6 h-6'
                         fill='none'
@@ -29,6 +31,7 @@ const ProductDetails = () => {
                         />
                     </svg>
                 </button>
+               </Link>
 
                 <div className="flex-grow flex justify-center">
                     <h1 className='text-xl font-semibold p-1'>Product Details</h1>

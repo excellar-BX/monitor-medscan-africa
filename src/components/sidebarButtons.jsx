@@ -4,10 +4,10 @@ import producticon from "../icons/producticon.svg";
 import profile from "../icons/profile.svg";
 
 
-    let styleOne= "w-[294px] h-[65px] cursor-pointer flex flex-row items-center  gap-[8px]  px-[55px] bg-white";
-    let styleTwo= "w-[294px] h-[65px] cursor-pointer flex flex-row items-center  gap-[8px]  px-[55px] bg-blue ";
-    let textstyleone= 'font-jarkatasans w-[56px] h-[25px] text-[20px] font-light leading-[25.2px] tracking-[-0.05em] text-left text-limewhite'
-    let textstyletwo= 'font-jarkatasans w-[56px] h-[25px] text-[20px] font-medium leading-[25.2px] tracking-[-0.05em] text-left text-black'
+    let styleOne= "w-[264px] h-[55px] cursor-pointer flex flex-row items-center  gap-[8px]  px-[45px] bg-white";
+    let styleTwo= "w-[264px] h-[55px] cursor-pointer flex flex-row items-center  gap-[8px]  px-[45px] bg-blue ";
+    let textstyleone= 'font-jarkatasans w-[56px] h-[25px] text-[17px] font-light leading-[25.2px] tracking-[-0.05em] text-left text-limewhite'
+    let textstyletwo= 'font-jarkatasans w-[56px] h-[25px] text-[17px] font-medium leading-[25.2px] tracking-[-0.05em] text-left text-black'
 
 
 function HomeButton({active}) {

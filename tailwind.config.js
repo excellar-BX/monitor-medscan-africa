@@ -11,8 +11,13 @@ export default {
     },
     extend: {
       colors: {
-        blue: "#647BED",
-      },
+        blue: '#647BED',
+        limewhite: '#F5F5F5',
+        gray: "#949595",
+        lightgray: "#F8F9FB",
+        textblack: "#1E1E1E",
+        darkgray: "#696969"
+      }
     },
   },
   plugins: [],

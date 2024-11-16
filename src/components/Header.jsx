@@ -4,7 +4,7 @@ import user from "../icons/user.svg"
 
 function Header() {
     return (
-        <header className="ml-[4px] px-[16px] h-[100px] flex items-center bg-white  ">
+        <header className="ml-[6px] w-dvw pl-[69px] h-[70px] flex justify-between items-center bg-white  ">
          <div className="flex flex-row gap-[212px]  pl-[30px] items-center  ">
            <SearchBar />
            <div className="flex items-center gap-[20px]">
