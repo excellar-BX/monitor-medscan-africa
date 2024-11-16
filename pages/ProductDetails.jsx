@@ -1,37 +1,72 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useParams, Link } from "react-router-dom";
 import location from "../src/icons/locationicon.svg";
 import eclipse from "../src/icons/eclipse.svg";
-import dottedmarker from "../src/icons/dottedmarker.svg";
-import { Link } from "react-router-dom";
 
 const ProductDetails = () => {
-    const productData = {
+    const { productName } = useParams();
+    const [productData, setProductData] = useState({
         "Product name": "",
         Date: "",
         UID: "",
         "Batch No": "",
+    });
+
+    const fetchDetails = async () => {
+        try {
+            const response = await fetch(`https://medscan-backend-4lgk.onrender.com/api/products/product/${decodeURIComponent(productName)}`);
+            const data = await response.json();
+
+            if (data && data.productInformation) {
+                setProductData({
+                    "Product name": data.productInformation.productName || productName || "",
+                    Date: data.productInformation.date || "",
+                    UID: data.productInformation.uid || "",
+                    "Batch No": data.productInformation.batchNo || "",
+                });
+            } else {
+                console.error('Unexpected data structure:', data);
+                setProductData(prev => ({
+                    ...prev,
+                    "Product name": productName || "",
+                }));
+            }
+        } catch (error) {
+            console.error('Error fetching product details:', error);
+            setProductData(prev => ({
+                ...prev,
+                "Product name": productName || "",
+            }));
+        }
     };
+
+    useEffect(() => {
+        if (productName) {
+            fetchDetails();
+        }
+    }, [productName]);
+
 
     return (
         <div className='bg-gray-100 pb-20'>
             <div className='flex mb-10 md:mb-16 p-0 md:p-5 bg-white w-full  items-center'>
-               <Link to={`/product`}>
-               <button className='text-gray-600 hover:text-gray-900'>
-                    <svg
-                        className='w-6 h-6'
-                        fill='none'
-                        stroke='currentColor'
-                        viewBox='0 0 24 24'
-                    >
-                        <path
-                            strokeLinecap='round'
-                            strokeLinejoin='round'
-                            strokeWidth={2}
-                            d='M15 19l-7-7 7-7'
-                        />
-                    </svg>
-                </button>
-               </Link>
+                <Link to={`/product`}>
+                    <button className='text-gray-600 hover:text-gray-900'>
+                        <svg
+                            className='w-6 h-6'
+                            fill='none'
+                            stroke='currentColor'
+                            viewBox='0 0 24 24'
+                        >
+                            <path
+                                strokeLinecap='round'
+                                strokeLinejoin='round'
+                                strokeWidth={2}
+                                d='M15 19l-7-7 7-7'
+                            />
+                        </svg>
+                    </button>
+                </Link>
 
                 <div className="flex-grow flex justify-center">
                     <h1 className='text-xl font-semibold p-1'>Product Details</h1>
@@ -52,7 +87,7 @@ const ProductDetails = () => {
                                     {key}
                                 </div>
                                 <div className='w-2/3 py-6 px-4 text-sm text-gray-900'>
-                                    {value}
+                                    {value || "Not available"}
                                 </div>
 
                             </div>

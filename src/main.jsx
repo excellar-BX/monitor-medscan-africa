@@ -21,12 +21,16 @@ const router = createBrowserRouter([
         element: <HomeOutlet />,
       },
       {
-        path: "Home", 
+        path: "Home",
         element: <HomeOutlet />,
       },
       {
         path: "Product",
         element: <ProductPage />,
+      },
+      {
+        path: "product/:productName",
+        element: <ProductDetails />,
       },
       {
         path: "/manufacturers",
@@ -37,10 +41,6 @@ const router = createBrowserRouter([
   {
     path: "*", // Catch-all route for undefined paths
     element: <HomeDahboard />, // Redirects to HomeDahboard
-  },
-  {
-    path: "/product-details",
-    element: <ProductDetails />,
   },
 ]);
 
