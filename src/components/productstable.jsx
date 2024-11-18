@@ -1,8 +1,9 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import dropdown from '../icons/dropdown.svg';
 import previousicon from '../icons/previousicon.png';
 import nexticon from '../icons/nexticon.png';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function ProductTable() {
   const [productNames, setProductNames] = useState([]);
@@ -10,12 +11,14 @@ function ProductTable() {
   const [productDetails, setProductDetails] = useState(null);
   const [overlayVisible, setOverlayVisible] = useState(false);
 
+  const navigate = useNavigate()
   // Fetch product names
   useEffect(() => {
     async function fetchProductNames() {
       try {
         const response = await fetch('https://medscan-backend-4lgk.onrender.com/api/products/products/names');
         const data = await response.json();
+        console.log(data);
         setProductNames(data);
       } catch (error) {
         console.error('Error fetching product names:', error);
@@ -41,16 +44,15 @@ function ProductTable() {
   }, [selectedProductId]);
 
   // Handle product selection and overlay visibility
-  const handleProductClick = (productId) => {
-    setSelectedProductId(productId);
-    setOverlayVisible(true);
+  const handleProductClick = (productName) => {
+    navigate(`/product/${encodeURIComponent(productName)}`);
   };
 
   // Close overlay
-  const closeOverlay = () => {
-    setOverlayVisible(false);
-    setProductDetails(null);
-  };
+  // const closeOverlay = () => {
+  //   setOverlayVisible(false);
+  //   setProductDetails(null);
+  // };
 
   return (
     <div className="flex-col ml-[109px] w-[750px] bg-limewhite items-center mt-[20px] pb-[40px]">
