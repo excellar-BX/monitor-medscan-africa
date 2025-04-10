@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    @font-face {
+      font-family: "Montserrat";
+      src: url(./Fonts/Montserrat-Regular.ttf)
+    }
+  }
+
+
+body{
+    font-family:Montserrat;
+    margin:0;
+    padding:0;
+}
+
+::webkit-scrollbar{
+  width: 4px;
+}
