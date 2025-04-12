@@ -72,8 +72,10 @@ const NotificationBell = () => {
   return (
     <>
     <div>
-      <div onClick={simulateNewScan} className='bg-red-500 cursor-pointer px-4 py-1 text-center ' >Simulate Scan</div>
+      {/* <div onClick={simulateNewScan} className='bg-red-500 cursor-pointer px-4 py-1 text-center ' >Simulate Scan</div>
+*/}
       <div className="bell cursor-pointer relative ">
+
         <button className='' onClick={markAsRead} ><BiBell className='text-3xl  ' /></button>
         {unreadCount > 0 && !modalOpen &&(
           <span className='absolute -right-2 -top-1 bg-red-600 text-white rounded-full w-5 h-5 flex justify-center items-center text-xs ' >{unreadCount}</span>
