@@ -72,9 +72,9 @@ const NotificationBell = () => {
   return (
     <>
     <div>
-      <div onClick={simulateNewScan} className='bg-red-500 cursor-pointer px-4 py-1 text-center ' >Simulate Scan</div>
-      <div className="bell cursor-pointer relative ">
-        <button className='' onClick={markAsRead} ><BiBell className='text-3xl  ' /></button>
+      {/* <div onClick={simulateNewScan} className='bg-red-500 cursor-pointer px-4 py-1 text-center ' >Simulate Scan</div> */}
+      <div className="bell relative ">
+        <button className='hover:cursor-pointer' onClick={markAsRead} ><BiBell className='text-3xl  ' /></button>
         {unreadCount > 0 && !modalOpen &&(
           <span className='absolute -right-2 -top-1 bg-red-600 text-white rounded-full w-5 h-5 flex justify-center items-center text-xs ' >{unreadCount}</span>
         )}
@@ -91,21 +91,21 @@ export default NotificationBell;
 const Modal = ({data, modalOpen, setModalOpen}) => {
 
   return(
-    <div className={` bg-white py-3 border-black shadow-md rounded-md max-h-[400px] overflow-y-auto ${modalOpen? "flex-col flex " : "hidden"} fixed top-[30%] left-[40%]  w-[500px]   `} >
-      <div className="flex justify-between items-center">
+    <div className={` bg-white py-3 border-black shadow-md rounded-md max-h-[400px]  ${modalOpen? "flex-col flex " : "hidden"} fixed top-[30%] left-[40%]  w-[500px]   `} >
+      <div className="flex justify-between items-center border-b border-black border-opacity-20 ">
       <span className='text-3xl p-3 font-bold flex gap-x-3 items-center ' > Notifications Alert</span>
       <BiX className='text-4xl my-3 mx-5 font-bold flex hover:cursor-pointer ' onClick={()=> {setModalOpen(!modalOpen)}} />
       </div>
     {
       data.length > 0 ? ( 
-        <ul className='w-full ' >
+        <ul className='w-full overflow-y-auto ' >
           {data.map((item, index) => (
             <div className="mx-2 text-sm p-2 border-[#ddd] border-2 rounded-md my-3 shadow-sm " >
               <div className="flex justify-between items-center px-2 py-1 " >
             <li> <span className='text-xs   ' >Scanned By: </span> {item.scannerName || "scannerName"}</li>
             <li><span className='text-xs   ' >Product Id: </span> {item.productCode || "productCode" } </li>
               </div>
-            <li className="text-end" > <span className='text-xs   ' >Role: </span> {item.scannerRole || "role"}</li>
+            <li className="text-start px-2" > <span className='text-xs   ' >Role: </span> {item.scannerRole || "role"}</li>
             </div>
           ))}
         </ul>
