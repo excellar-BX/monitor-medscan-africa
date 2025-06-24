@@ -10,6 +10,9 @@ import HomeOutlet from "../pages/HomeOutlet";
 import ProductPage from "../pages/products";
 import ManufacturerOutlet from "../pages/manufacturesOutlet";
 import ProductDetails from "../pages/ProductDetails";
+import ManufacturerDetails from "../pages/ManufacturerDetails";
+import BatchDetails from "../pages/BatchDetails";
+import PackageDetails from "../pages/PackageDetails";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +38,18 @@ const router = createBrowserRouter([
       {
         path: "/manufacturers",
         element: <ManufacturerOutlet />,
+      },
+      {
+        path: "/manufacturers/:id",
+        element: <ManufacturerDetails />,
+      },
+      {
+        path: "/manufacturers/:id/:productName",
+        element: <BatchDetails />,
+      },
+      {
+        path: "/manufacturers/:id/:productName/:batchId",
+        element: <PackageDetails />,
       },
     ],
   },

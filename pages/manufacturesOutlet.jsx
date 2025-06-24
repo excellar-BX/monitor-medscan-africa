@@ -1,13 +1,11 @@
 import Header from "../src/components/Header";
-import ManufacturerSearchBar from "../src/components/searchIdbar";
 import ManufacturerTable from "../src/components/manufacturertable";
 
 function ManufacturerOutlet() {
   return (
-    <div className="flex-col overflow-x-hidden overflow-y-auto ">
+    <div className="flex-col overflow-x-hidden overflow-y-auto mx-5 ">
       <Header />
       <TextContent />
-      <ManufacturerSearchBar />
       <ManufacturerTable />
     </div>
   );
@@ -15,14 +13,17 @@ function ManufacturerOutlet() {
 
 function TextContent() {
   return (
-    <div className="ml-[50px] mt-[35px] flex-col ">
-      <p className="font-jakartasans font-bold text-textblack text-[26px] ">
+    <div className=" bg-[#d1e0fa] mt-[35px] flex justify-between pl-3 items-center ">
+      <div>
+        <p className="font-jakartasans font-bold text-[#20427d] text-[26px] ">
         Manufacturers
+      <p className=" font-jakartasans font-light text-sm text-[#4573c3] w-[640px] ">
+        At Med Scan, we partner with trusted manufacturers worldwide to bring
+        you genuine, high-quality products..
       </p>
-      <p className="mt-[15px] font-jakartasans font-light text-[16px] w-[640px] ">
-        "At Med Scan, we partner with trusted manufacturers worldwide to bring
-        you genuine, high-quality products.."
       </p>
+      </div>
+      <img className="w-[20%] " src="./banner_pic.png" alt="" />
     </div>
   );
 }

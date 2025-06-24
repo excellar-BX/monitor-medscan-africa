@@ -5,16 +5,28 @@
 
 @layer base {
     @font-face {
-      font-family: "Montserrat";
-      src: url(./Fonts/Montserrat-Regular.ttf)
+      font-family: "Satoshi";
+      src: url("./Fonts/Satoshi-Regular.otf")
+    }
+    @font-face {
+      font-family: "Satoshi-bold";
+      src: url("./Fonts/Satoshi-Bold.otf");
     }
   }
 
 
 body{
-    font-family:Montserrat;
+    font-family: Satoshi;
     margin:0;
     padding:0;
+}
+
+table{
+  border-collapse: collapse;
+}
+td, th{
+  border-bottom: 1px solid black;
+  padding:10px 0;
 }
 
 ::webkit-scrollbar{
