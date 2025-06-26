@@ -7,11 +7,9 @@ import { Outlet } from "react-router-dom";
 
 function HomeDahboard() {
   return (
-    <div className="flex w-screen h-screen overflow-x-hidden overflow-y-hidden bg-limewhite  ">
-      <div className="pt-[170px] bg-white h-full">
+    <div className="flex w-screen h-screen overflow-x-hidden overflow-y-hidden  ">
         <NavigationPanel />
-      </div>
-      <div className="overflow-y-auto" id="details">
+      <div className="overflow-y-auto w-full " id="details">
         <Outlet />
       </div>
     </div>

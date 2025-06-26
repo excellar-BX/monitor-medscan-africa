@@ -23,7 +23,7 @@ function ProductCard() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('https://medscan-backend-4lgk.onrender.com/api/products/all-products');
+                const response = await fetch('https://medscan-backend-4lgk.onrender.com/api/products/all');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
@@ -38,9 +38,6 @@ function ProductCard() {
     }, []); 
 
 
-    if (error) {
-        return <div>Error: {error}</div>;
-    }
 
     return(
         <div className="flex rounded-[20px] bg-white w-[350px] h-[220px] pt-[38px] pl-[38px] pr-[38px] justify-between  ">
@@ -69,7 +66,7 @@ function ManufacturerCard() {
   
         const fetchData = async () => {
             try {
-                const response = await fetch('https://medscan-backend-4lgk.onrender.com/api/manufacturers');
+                const response = await fetch('https://medscan-backend-4lgk.onrender.com/api/manufacturer/all');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
