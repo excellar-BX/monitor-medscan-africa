@@ -72,7 +72,7 @@ const ManufacturerDetails = () => {
                     </Link>
                 </div>
                 <div className="flex justify-center items-center h-64">
-                    <div className="text-xl">Manufacturer not found</div>
+                    <div className="text-xl">Manufacturer with id <span>{id}</span> not found</div>
                 </div>
             </div>
         );
